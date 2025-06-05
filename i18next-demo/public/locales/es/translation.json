@@ -1,0 +1,4 @@
+{
+  "welcome": "Bienvenido a la aplicación",
+  "description": "Esta es una demostración simple de i18n usando react-i18next."
+}
