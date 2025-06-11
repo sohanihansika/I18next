@@ -1,0 +1,130 @@
+{
+    "sidebar": {
+      "title": "Features",
+      "essentials": "Essentials",
+      "interpolation": "Interpolation",
+      "formatting": "Formatting",
+      "plurals": "Plurals",
+      "nesting": "Nesting",
+      "context": "Context"
+    },
+    "home": {
+      "welcome": "Welcome to React i18next Demo",
+      "description": "<0>Explore the powerful features of <1>react-i18next</1> internationalization library. Click on any feature in the sidebar to see live examples and learn how to implement multilingual support in your React applications.</0>"
+    },
+    "features": {
+      "essentials": {
+        "title": "Translation Essentials",
+        "description": "Basic translation methods and key usage patterns"
+      },
+      "interpolation": {
+        "title": "Variable Interpolation",
+        "description": "Insert dynamic values into your translations"
+      },
+      "formatting": {
+        "title": "Number & Date Formatting",
+        "description": "Format numbers, dates, and currencies based on locale"
+      },
+      "plurals": {
+        "title": "Pluralization Rules",
+        "description": "Handle singular and plural forms automatically"
+      },
+      "nesting": {
+        "title": "Nested Translations",
+        "description": "Organize translations with nested object structures"
+      },
+      "context": {
+        "title": "Contextual Translations",
+        "description": "Provide different translations based on context"
+      }
+    },
+    "essentials": {
+      "title": "Translation Essentials",
+      "basic": {
+        "title": "Basic Usage Examples",
+        "simple": "Simple Translation",
+        "example": "Hello, World!",
+        "withVariables": "Translation with Variables",
+        "variableExample": "Hello {{name}}, you are {{age}} years old!"
+      }
+    },
+    "interpolation": {
+      "title": "Variable Interpolation",
+      "demo": {
+        "title": "Interactive Demo",
+        "nameLabel": "Enter your name:",
+        "namePlaceholder": "Your name",
+        "ageLabel": "Enter your age:",
+        "agePlaceholder": "Your age",
+        "result": "Hello {{name}}, you are {{age}} years old!",
+        "fillFields": "Fill in the fields above to see interpolation in action",
+        "defaultName": "Guest",
+        "defaultAge": "Unknown"
+      }
+    },
+    "formatting": {
+      "title": "Number & Date Formatting",
+      "date": {
+        "title": "Date Formatting",
+        "example": "Current date: {{date}}"
+      },
+      "currency": {
+        "title": "Currency Formatting",
+        "example": "Price: {{price}}"
+      },
+      "number": {
+        "title": "Number Formatting",
+        "example": "Large number: {{number}}"
+      }
+    },
+    "plurals": {
+      "title": "Pluralization",
+      "demo": {
+        "title": "Plural Forms Demo",
+        "countLabel": "Enter item count:",
+        "items_one": "{{count}} item",
+        "items_other": "{{count}} items",
+        "messages_one": "{{count}} new message",
+        "messages_other": "{{count}} new messages",
+        "users_one": "{{count}} user online",
+        "users_other": "{{count}} users online"
+      }
+},
+
+    "nesting": {
+      "title": "Nested Translations",
+      "user": {
+        "title": "User Information",
+        "profile": {
+          "name": "Name",
+          "email": "Email",
+          "role": "Role",
+          "roles": {
+            "admin": "Administrator",
+            "user": "User",
+            "guest": "Guest"
+          }
+        }
+      },
+      "navigation": {
+        "title": "Navigation Menu",
+        "menu": {
+          "home": "Home",
+          "about": "About",
+          "contact": "Contact"
+        }
+      }
+    },
+    "context": {
+      "title": "Contextual Translations",
+      "demo": {
+        "title": "Context-based Demo",
+        "genderLabel": "Select gender:",
+        "male": "Male",
+        "female": "Female",
+        "greeting_male": "Welcome Mr. {{name}}!",
+        "greeting_female": "Welcome Ms. {{name}}!"
+      }
+    }
+
+}

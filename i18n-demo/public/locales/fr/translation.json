@@ -1,0 +1,128 @@
+{
+  "sidebar": {
+    "title": "Fonctionnalités",
+    "essentials": "Essentiels",
+    "interpolation": "Interpolation",
+    "formatting": "Formatage",
+    "plurals": "Pluriels",
+    "nesting": "Imbrication",
+    "context": "Contexte"
+  },
+  "home": {
+    "welcome": "Bienvenue dans la Démo React i18next",
+    "description": "<0>Explorez les fonctionnalités puissantes de la bibliothèque d'internationalisation <1>react-i18next</1>. Cliquez sur n'importe quelle fonctionnalité dans la barre latérale pour voir des exemples en direct et apprendre comment implémenter le support multilingue dans vos applications React.</0>"
+  },
+  "features": {
+    "essentials": {
+      "title": "Fondamentaux de Traduction",
+      "description": "Méthodes de traduction de base et modèles d'utilisation des clés"
+    },
+    "interpolation": {
+      "title": "Interpolation de Variables",
+      "description": "Insérer des valeurs dynamiques dans vos traductions"
+    },
+    "formatting": {
+      "title": "Formatage des Nombres et Dates",
+      "description": "Formater les nombres, dates et devises selon les paramètres régionaux"
+    },
+    "plurals": {
+      "title": "Règles de Pluralisation",
+      "description": "Gérer automatiquement les formes singulières et plurielles"
+    },
+    "nesting": {
+      "title": "Traductions Imbriquées",
+      "description": "Organiser les traductions avec des structures d'objets imbriqués"
+    },
+    "context": {
+      "title": "Traductions Contextuelles",
+      "description": "Fournir différentes traductions selon le contexte"
+    }
+  },
+  "essentials": {
+    "title": "Fondamentaux de Traduction",
+    "basic": {
+      "title": "Exemples d'Utilisation de Base",
+      "simple": "Traduction Simple",
+      "example": "Bonjour, le Monde!",
+      "withVariables": "Traduction avec Variables",
+      "variableExample": "Bonjour {{name}}, vous avez {{age}} ans!"
+    }
+  },
+  "interpolation": {
+    "title": "Interpolation de Variables",
+    "demo": {
+      "title": "Démo Interactive",
+      "nameLabel": "Entrez votre nom:",
+      "namePlaceholder": "Votre nom",
+      "ageLabel": "Entrez votre âge:",
+      "agePlaceholder": "Votre âge",
+      "result": "Bonjour {{name}}, vous avez {{age}} ans!",
+      "fillFields": "Remplissez les champs ci-dessus pour voir l'interpolation en action",
+      "defaultName": "Invité",
+      "defaultAge": "Inconnu"
+    }
+  },
+  "formatting": {
+    "title": "Formatage des Nombres et Dates",
+    "date": {
+      "title": "Formatage des Dates",
+      "example": "Date actuelle: {{date}}"
+    },
+    "currency": {
+      "title": "Formatage des Devises",
+      "example": "Prix: {{price}}"
+    },
+    "number": {
+      "title": "Formatage des Nombres",
+      "example": "Grand nombre: {{number}}"
+    }
+  },
+  "plurals": {
+    "title": "Pluralisation",
+    "demo": {
+      "title": "Démo des Formes Plurielles",
+      "countLabel": "Entrez le nombre d'éléments:",
+      "items_one": "{{count}} élément",
+      "items_other": "{{count}} éléments",
+      "messages_one": "{{count}} nouveau message",
+      "messages_other": "{{count}} nouveaux messages",
+      "users_one": "{{count}} utilisateur en ligne",
+      "users_other": "{{count}} utilisateurs en ligne"  
+    }
+  },
+  "nesting": {
+    "title": "Traductions Imbriquées",
+    "user": {
+      "title": "Informations Utilisateur",
+      "profile": {
+        "name": "Nom",
+        "email": "Email",
+        "role": "Rôle",
+        "roles": {
+          "admin": "Administrateur",
+          "user": "Utilisateur",
+          "guest": "Invité"
+        }
+      }
+    },
+    "navigation": {
+      "title": "Menu de Navigation",
+      "menu": {
+        "home": "Accueil",
+        "about": "À propos",
+        "contact": "Contact"
+      }
+    }
+  },
+  "context": {
+    "title": "Traductions Contextuelles",
+    "demo": {
+      "title": "Démo Basée sur le Contexte",
+      "genderLabel": "Sélectionnez le genre:",
+      "male": "Masculin",
+      "female": "Féminin",
+      "greeting_male": "Bienvenue M. {{name}}!",
+      "greeting_female": "Bienvenue Mme {{name}}!"
+      }
+    }
+  }
