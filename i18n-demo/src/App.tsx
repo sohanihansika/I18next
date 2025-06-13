@@ -12,56 +12,59 @@ import FallbackPage from "./pages/Fallback";
 import { useTranslation } from "react-i18next";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState("home");
   const { t } = useTranslation();
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'essentials': return <EssentialsPage />;
-      case 'interpolation': return <InterpolationPage />;
-      case 'formatting': return <FormattingPage />;
-      case 'plurals': return <PluralsPage />;
-      case 'nesting': return <NestingPage />;
-      case 'context': return <ContextPage />;
-      case 'fallback': return <FallbackPage />;
-      default: return <HomePage />;
+      case "essentials":
+        return <EssentialsPage />;
+      case "interpolation":
+        return <InterpolationPage />;
+      case "formatting":
+        return <FormattingPage />;
+      case "plurals":
+        return <PluralsPage />;
+      case "nesting":
+        return <NestingPage />;
+      case "context":
+        return <ContextPage />;
+      case "fallback":
+        return <FallbackPage />;
+      default:
+        return <HomePage />;
     }
   };
 
   return (
-    <Suspense fallback={
-      <div className="flex justify-center items-center min-h-screen">
-        Loading...
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="flex justify-center items-center min-h-screen">
+          Loading...
+        </div>
+      }
+    >
       <div className="min-h-screen">
         <header>
           <div className="header-inner">
             <div className="header-left">
-              <h1 
+              <h1
                 className="header-title"
-                onClick={() => setCurrentPage('home')}
+                onClick={() => setCurrentPage("home")}
               >
-                {t('header')}
+                {t("header")}
               </h1>
             </div>
             <div className="header-right">
-                <LanguageSwitcher />
+              <LanguageSwitcher />
             </div>
-              
-            
           </div>
         </header>
 
         <div className="flex">
-          <Sidebar 
-            currentPage={currentPage} 
-            onPageChange={setCurrentPage}
-          />
-          
-          <main>
-            {renderPage()}
-          </main>
+          <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
+
+          <main>{renderPage()}</main>
         </div>
       </div>
     </Suspense>

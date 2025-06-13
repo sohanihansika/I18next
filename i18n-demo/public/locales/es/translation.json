@@ -68,7 +68,7 @@
       "defaultAge": "Desconocido"
     }
   },
-  
+
   "formatting": {
     "title": "Formato de Números y Fechas",
     "date": {
@@ -99,31 +99,31 @@
       "messages_one": "{{count}} mensaje nuevo",
       "messages_other": "{{count}} mensajes nuevos",
       "users_one": "{{count}} usuario en línea",
-      "users_other": "{{count}} usuarios en línea" 
+      "users_other": "{{count}} usuarios en línea"
     }
   },
- "nesting": {
-  "title": "Traducciones anidadas",
-  "basic": {
-    "title": "Básico",
-    "nesting1": "1 $t(nesting.basic.nesting2)",
-    "nesting2": "2 $t(nesting.basic.nesting3)",
-    "nesting3": "3"
+  "nesting": {
+    "title": "Traducciones anidadas",
+    "basic": {
+      "title": "Básico",
+      "nesting1": "1 $t(nesting.basic.nesting2)",
+      "nesting2": "2 $t(nesting.basic.nesting3)",
+      "nesting3": "3"
+    },
+    "option": {
+      "title": "Pasar opciones a anidaciones",
+      "girlsAndBoys": "Tienen $t(nesting.option.girls, {\"count\": {{girls}} }) y $t(nesting.option.boys, {\"count\": {{boys}} })",
+      "boys": "{{count}} niño",
+      "boys_other": "{{count}} niños",
+      "girls": "{{count}} niña",
+      "girls_other": "{{count}} niñas"
+    },
+    "interpolate": {
+      "title": "Pasar anidaciones a interpolaciones",
+      "key1": "hola mundo",
+      "key2": "decir: {{val}}"
+    }
   },
-  "option": {
-    "title": "Pasar opciones a anidaciones",
-    "girlsAndBoys": "Tienen $t(nesting.option.girls, {\"count\": {{girls}} }) y $t(nesting.option.boys, {\"count\": {{boys}} })",
-    "boys": "{{count}} niño",
-    "boys_other": "{{count}} niños",
-    "girls": "{{count}} niña",
-    "girls_other": "{{count}} niñas"
-  },
-  "interpolate": {
-    "title": "Pasar anidaciones a interpolaciones",
-    "key1": "hola mundo",
-    "key2": "decir: {{val}}"
-  }
-},
 
   "context": {
     "title": "Traducciones Contextuales",
@@ -138,11 +138,10 @@
       "greeting_female_other": "¡Bienvenida Sra. {{name}}! Tienes {{count}} nuevos mensajes.",
       "greeting_male_zero": "¡Bienvenido Sr. {{name}}! No tienes nuevos mensajes.",
       "greeting_female_zero": "¡Bienvenida Sra. {{name}}! No tienes nuevos mensajes."
-      
-      }
-    },
-    "fallback": {
-      "title": "Idioma de Respaldo",
-      "missingKey": "Falta una clave de traducción al francés. Se está usando el inglés predeterminado."
     }
+  },
+  "fallback": {
+    "title": "Idioma de Respaldo",
+    "missingKey": "Falta una clave de traducción al francés. Se está usando el inglés predeterminado."
   }
+}

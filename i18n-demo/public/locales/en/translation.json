@@ -1,75 +1,74 @@
 {
-  "header":"React i18next Demo",
-    "sidebar": {
-      "title": "Features",
-      "essentials": "Essentials",
-      "interpolation": "Interpolation",
-      "formatting": "Formatting",
-      "plurals": "Plurals",
-      "nesting": "Nesting",
-      "context": "Context",
-      "fallback": "Fallback"
-    },
-    "home": {
-      "welcome": "Welcome to React i18next Demo",
-      "description": "<0>Explore the powerful features of <1>react-i18next</1> internationalization library. Click on any feature in the sidebar to see live examples and learn how to implement multilingual support in your React applications.</0>"
-    },
-    "features": {
-      "essentials": {
-        "title": "Translation Essentials",
-        "description": "Basic translation methods and key usage patterns"
-      },
-      "interpolation": {
-        "title": "Variable Interpolation",
-        "description": "Insert dynamic values into your translations"
-      },
-      "formatting": {
-        "title": "Number & Date Formatting",
-        "description": "Format numbers, dates, and currencies based on locale"
-      },
-      "plurals": {
-        "title": "Pluralization Rules",
-        "description": "Handle singular and plural forms automatically"
-      },
-      "nesting": {
-        "title": "Nested Translations",
-        "description": "Allows to reference other keys in a translation"
-      },
-      "context": {
-        "title": "Contextual Translations",
-        "description": "Provide different translations based on context"
-      },
-      "fallback": {
-        "title": "Fallback Language",
-        "description": "Use a fallback language when translations are missing"
-      }
-
-    },
+  "header": "React i18next Demo",
+  "sidebar": {
+    "title": "Features",
+    "essentials": "Essentials",
+    "interpolation": "Interpolation",
+    "formatting": "Formatting",
+    "plurals": "Plurals",
+    "nesting": "Nesting",
+    "context": "Context",
+    "fallback": "Fallback"
+  },
+  "home": {
+    "welcome": "Welcome to React i18next Demo",
+    "description": "<0>Explore the powerful features of <1>react-i18next</1> internationalization library. Click on any feature in the sidebar to see live examples and learn how to implement multilingual support in your React applications.</0>"
+  },
+  "features": {
     "essentials": {
       "title": "Translation Essentials",
-      "basic": {
-        "title": "Basic Usage Examples",
-        "simple": "Simple Translation",
-        "example": "Hello, World!",
-        "withVariables": "Translation with Variables",
-        "variableExample": "Hello {{name}}, you are {{age}} years old!"
-      }
+      "description": "Basic translation methods and key usage patterns"
     },
     "interpolation": {
       "title": "Variable Interpolation",
-      "demo": {
-        "title": "Interactive Demo",
-        "nameLabel": "Enter your name:",
-        "namePlaceholder": "Your name",
-        "ageLabel": "Enter your age:",
-        "agePlaceholder": "Your age",
-        "result": "Hello {{name}}, you are {{age}} years old!",
-        "fillFields": "Hi {{loggedInUser.name}}, Fill in the fields above to see interpolation in action",
-        "defaultName": "Guest",
-        "defaultAge": "Unknown"
-      }
+      "description": "Insert dynamic values into your translations"
     },
     "formatting": {
+      "title": "Number & Date Formatting",
+      "description": "Format numbers, dates, and currencies based on locale"
+    },
+    "plurals": {
+      "title": "Pluralization Rules",
+      "description": "Handle singular and plural forms automatically"
+    },
+    "nesting": {
+      "title": "Nested Translations",
+      "description": "Allows to reference other keys in a translation"
+    },
+    "context": {
+      "title": "Contextual Translations",
+      "description": "Provide different translations based on context"
+    },
+    "fallback": {
+      "title": "Fallback Language",
+      "description": "Use a fallback language when translations are missing"
+    }
+  },
+  "essentials": {
+    "title": "Translation Essentials",
+    "basic": {
+      "title": "Basic Usage Examples",
+      "simple": "Simple Translation",
+      "example": "Hello, World!",
+      "withVariables": "Translation with Variables",
+      "variableExample": "Hello {{name}}, you are {{age}} years old!"
+    }
+  },
+  "interpolation": {
+    "title": "Variable Interpolation",
+    "demo": {
+      "title": "Interactive Demo",
+      "nameLabel": "Enter your name:",
+      "namePlaceholder": "Your name",
+      "ageLabel": "Enter your age:",
+      "agePlaceholder": "Your age",
+      "result": "Hello {{name}}, you are {{age}} years old!",
+      "fillFields": "Hi {{loggedInUser.name}}, Fill in the fields above to see interpolation in action",
+      "defaultName": "Guest",
+      "defaultAge": "Unknown"
+    }
+  },
+  "formatting": {
     "title": "Number & Date Formatting",
     "date": {
       "title": "Date Formatting",
@@ -87,68 +86,64 @@
       "title": "Relative Time Formatting",
       "example": "Last login: {{timestamp, relative}}"
     }
-  
-},
+  },
 
-    "plurals": {
-      "title": "Pluralization",
-      "demo": {
-        "countLabel": "Enter item count:",
-        "items_one": "{{count}} item",
-        "items_other": "{{count}} items",
-        "messages_zero": "No new messages",
-        "messages_one": "One new message",
-        "messages_other": "{{count}} new messages",
-        "users_ordinal_one": "{{count}}st place",
-        "users_ordinal_two": "{{count}}nd place",
-        "users_ordinal_few": "{{count}}rd place",
-        "users_other": "{{count}}th place"
-      }
-},
-
-    "nesting": {
-      "title": "Nested Translations",
-       "basic": {
-        "title": "Basic",
-        "nesting1": "1 $t(nesting.basic.nesting2)",
-        "nesting2": "2 $t(nesting.basic.nesting3)",
-        "nesting3": "3"
-      },
-      "option": {
-        "title": "Passing options to nestings",
-        "girlsAndBoys": "They have $t(nesting.option.girls, {\"count\": {{girls}} }) and $t(nesting.option.boys, {\"count\": {{boys}} })",
-        "boys": "{{count}} boy",
-        "boys_other": "{{count}} boys",
-        "girls": "{{count}} girl",
-        "girls_other": "{{count}} girls"
-        
-      },
-      "interpolate":{
-        "title": "Passing nesting to interpolated",
-        "key1": "hello world",
-        "key2": "say: {{val}}"
-      }
-     
-      
-    },
-    "context": {
-      "title": "Contextual Translations",
-      "demo": {
-        "title": "Context-based Demo",
-        "genderLabel": "Select gender:",
-        "male": "Male",
-        "female": "Female",
-        "greeting_male_one": "Welcome Mr. {{name}}! You have {{count}} new message",
-        "greeting_female_one": "Welcome Ms. {{name}}! You have {{count}} new message",
-        "greeting_male_other": "Welcome Mr. {{name}}! You have {{count}} new messages",
-        "greeting_female_other": "Welcome Ms. {{name}}! You have {{count}} new messages",
-        "greeting_male_zero": "Welcome Mr. {{name}}! You have no new messages",
-        "greeting_female_zero": "Welcome Ms. {{name}}! You have no new messages"
-      }
-    },
-    "fallback": {
-      "title": "Fallback",
-      "missingKey": "This is a missing translation key in French. Using fallback to default English."
+  "plurals": {
+    "title": "Pluralization",
+    "demo": {
+      "countLabel": "Enter item count:",
+      "items_one": "{{count}} item",
+      "items_other": "{{count}} items",
+      "messages_zero": "No new messages",
+      "messages_one": "One new message",
+      "messages_other": "{{count}} new messages",
+      "users_ordinal_one": "{{count}}st place",
+      "users_ordinal_two": "{{count}}nd place",
+      "users_ordinal_few": "{{count}}rd place",
+      "users_other": "{{count}}th place"
     }
+  },
 
+  "nesting": {
+    "title": "Nested Translations",
+    "basic": {
+      "title": "Basic",
+      "nesting1": "1 $t(nesting.basic.nesting2)",
+      "nesting2": "2 $t(nesting.basic.nesting3)",
+      "nesting3": "3"
+    },
+    "option": {
+      "title": "Passing options to nestings",
+      "girlsAndBoys": "They have $t(nesting.option.girls, {\"count\": {{girls}} }) and $t(nesting.option.boys, {\"count\": {{boys}} })",
+      "boys": "{{count}} boy",
+      "boys_other": "{{count}} boys",
+      "girls": "{{count}} girl",
+      "girls_other": "{{count}} girls"
+    },
+    "interpolate": {
+      "title": "Passing nesting to interpolated",
+      "key1": "hello world",
+      "key2": "say: {{val}}"
+    }
+  },
+  "context": {
+    "title": "Contextual Translations",
+    "demo": {
+      "title": "Context-based Demo",
+      "genderLabel": "Select gender:",
+      "user": "User",
+      "user_male": "Male",
+      "user_female": "Female",
+      "greeting_male_one": "Welcome Mr. {{name}}! You have {{count}} new message",
+      "greeting_female_one": "Welcome Ms. {{name}}! You have {{count}} new message",
+      "greeting_male_other": "Welcome Mr. {{name}}! You have {{count}} new messages",
+      "greeting_female_other": "Welcome Ms. {{name}}! You have {{count}} new messages",
+      "greeting_male_zero": "Welcome Mr. {{name}}! You have no new messages",
+      "greeting_female_zero": "Welcome Ms. {{name}}! You have no new messages"
+    }
+  },
+  "fallback": {
+    "title": "Fallback",
+    "missingKey": "This is a missing translation key in French. Using fallback to default English."
+  }
 }

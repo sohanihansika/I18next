@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fafb;
   color: #333;
   line-height: 1.6;
@@ -17,13 +16,11 @@ a {
   color: inherit;
 }
 
-
 .min-h-screen {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 
 .header-inner {
   display: flex;
@@ -31,18 +28,16 @@ a {
   align-items: center;
 }
 
-
 .header-left {
   display: flex;
-  gap: 1rem; 
+  gap: 1rem;
   align-items: center;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-} 
-
+}
 
 .header-title {
   font-size: 1.25rem;
@@ -51,8 +46,6 @@ a {
   cursor: pointer;
   margin-right: 10px;
 }
-
-
 
 header {
   background-color: #fff;
@@ -91,7 +84,6 @@ main {
 
 /* Sidebar */
 nav {
-  
   width: 240px;
   padding: 16px;
   border-right: 1px solid #e5e7eb;
@@ -102,8 +94,6 @@ nav {
   top: 0;
   overflow-y: auto;
 }
-
-
 
 nav h2 {
   font-size: 1rem;
@@ -181,12 +171,12 @@ nav button.active {
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {

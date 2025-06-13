@@ -68,7 +68,7 @@
       "defaultAge": "Inconnu"
     }
   },
-  
+
   "formatting": {
     "title": "Formatage des Nombres et Dates",
     "date": {
@@ -98,31 +98,31 @@
       "messages_one": "{{count}} nouveau message",
       "messages_other": "{{count}} nouveaux messages",
       "users_one": "{{count}} utilisateur en ligne",
-      "users_other": "{{count}} utilisateurs en ligne"  
+      "users_other": "{{count}} utilisateurs en ligne"
     }
   },
- "nesting": {
-  "title": "Traductions imbriquées",
-  "basic": {
-    "title": "De base",
-    "nesting1": "1 $t(nesting.basic.nesting2)",
-    "nesting2": "2 $t(nesting.basic.nesting3)",
-    "nesting3": "3"
+  "nesting": {
+    "title": "Traductions imbriquées",
+    "basic": {
+      "title": "De base",
+      "nesting1": "1 $t(nesting.basic.nesting2)",
+      "nesting2": "2 $t(nesting.basic.nesting3)",
+      "nesting3": "3"
+    },
+    "option": {
+      "title": "Passage d’options aux imbrications",
+      "girlsAndBoys": "Ils ont $t(nesting.option.girls, {\"count\": {{girls}} }) et $t(nesting.option.boys, {\"count\": {{boys}} })",
+      "boys": "{{count}} garçon",
+      "boys_other": "{{count}} garçons",
+      "girls": "{{count}} fille",
+      "girls_other": "{{count}} filles"
+    },
+    "interpolate": {
+      "title": "Passer des imbrications à l'interpolation",
+      "key1": "bonjour le monde",
+      "key2": "dire : {{val}}"
+    }
   },
-  "option": {
-    "title": "Passage d’options aux imbrications",
-    "girlsAndBoys": "Ils ont $t(nesting.option.girls, {\"count\": {{girls}} }) et $t(nesting.option.boys, {\"count\": {{boys}} })",
-    "boys": "{{count}} garçon",
-    "boys_other": "{{count}} garçons",
-    "girls": "{{count}} fille",
-    "girls_other": "{{count}} filles"
-  },
-  "interpolate": {
-    "title": "Passer des imbrications à l'interpolation",
-    "key1": "bonjour le monde",
-    "key2": "dire : {{val}}"
-  }
-},
 
   "context": {
     "title": "Traductions Contextuelles",
@@ -137,9 +137,9 @@
       "greeting_female_other": "Bienvenue Mme {{name}}! Vous avez {{count}} nouveaux messages.",
       "greeting_male_zero": "Bienvenue M. {{name}}! Vous n'avez pas de nouveaux messages.",
       "greeting_female_zero": "Bienvenue Mme {{name}}! Vous n'avez pas de nouveaux messages."
-      }
-    },
-  "fallback": {
-        "title":"Retomber"
-      }
     }
+  },
+  "fallback": {
+    "title": "Retomber"
+  }
+}
