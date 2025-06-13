@@ -20,7 +20,7 @@ const EssentialsPage = () => {
             <strong>{t('essentials.basic.withVariables')}:</strong>
           </p>
           <p className="essentials-code">
-            {t('essentials.basic.variableExample', { name: 'John', age: 25 })}
+            {t('essentials.basic.variableExample', { name: 'John', age: 25  })}
           </p>
         </div>
       </div>

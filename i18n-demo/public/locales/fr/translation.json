@@ -1,4 +1,5 @@
 {
+  "header": "Démo React i18next",
   "sidebar": {
     "title": "Fonctionnalités",
     "essentials": "Essentiels",
@@ -6,7 +7,8 @@
     "formatting": "Formatage",
     "plurals": "Pluriels",
     "nesting": "Imbrication",
-    "context": "Contexte"
+    "context": "Contexte",
+    "fallback": "Retomber"
   },
   "home": {
     "welcome": "Bienvenue dans la Démo React i18next",
@@ -36,6 +38,10 @@
     "context": {
       "title": "Traductions Contextuelles",
       "description": "Fournir différentes traductions selon le contexte"
+    },
+    "fallback": {
+      "title": "Langue de secours",
+      "description": "Utiliser une langue de secours lorsque des traductions sont manquantes"
     }
   },
   "essentials": {
@@ -57,24 +63,29 @@
       "ageLabel": "Entrez votre âge:",
       "agePlaceholder": "Votre âge",
       "result": "Bonjour {{name}}, vous avez {{age}} ans!",
-      "fillFields": "Remplissez les champs ci-dessus pour voir l'interpolation en action",
+      "fillFields": "Bonjour {{loggedInUser.name}}, remplissez les champs ci-dessus pour voir l'interpolation en action",
       "defaultName": "Invité",
       "defaultAge": "Inconnu"
     }
   },
+  
   "formatting": {
     "title": "Formatage des Nombres et Dates",
     "date": {
-      "title": "Formatage des Dates",
-      "example": "Date actuelle: {{date}}"
+      "title": "Formatage de la Date",
+      "example": "Date actuelle : {{date, datetime}}"
     },
     "currency": {
-      "title": "Formatage des Devises",
-      "example": "Prix: {{price}}"
+      "title": "Formatage Monétaire",
+      "example": "Prix : {{price, currency}}"
     },
     "number": {
       "title": "Formatage des Nombres",
-      "example": "Grand nombre: {{number}}"
+      "example": "Grand nombre : {{number, number}}"
+    },
+    "relative": {
+      "title": "Formatage du Temps Relatif",
+      "example": "Dernière connexion : {{timestamp, relative}}"
     }
   },
   "plurals": {
@@ -90,30 +101,29 @@
       "users_other": "{{count}} utilisateurs en ligne"  
     }
   },
-  "nesting": {
-    "title": "Traductions Imbriquées",
-    "user": {
-      "title": "Informations Utilisateur",
-      "profile": {
-        "name": "Nom",
-        "email": "Email",
-        "role": "Rôle",
-        "roles": {
-          "admin": "Administrateur",
-          "user": "Utilisateur",
-          "guest": "Invité"
-        }
-      }
-    },
-    "navigation": {
-      "title": "Menu de Navigation",
-      "menu": {
-        "home": "Accueil",
-        "about": "À propos",
-        "contact": "Contact"
-      }
-    }
+ "nesting": {
+  "title": "Traductions imbriquées",
+  "basic": {
+    "title": "De base",
+    "nesting1": "1 $t(nesting.basic.nesting2)",
+    "nesting2": "2 $t(nesting.basic.nesting3)",
+    "nesting3": "3"
   },
+  "option": {
+    "title": "Passage d’options aux imbrications",
+    "girlsAndBoys": "Ils ont $t(nesting.option.girls, {\"count\": {{girls}} }) et $t(nesting.option.boys, {\"count\": {{boys}} })",
+    "boys": "{{count}} garçon",
+    "boys_other": "{{count}} garçons",
+    "girls": "{{count}} fille",
+    "girls_other": "{{count}} filles"
+  },
+  "interpolate": {
+    "title": "Passer des imbrications à l'interpolation",
+    "key1": "bonjour le monde",
+    "key2": "dire : {{val}}"
+  }
+},
+
   "context": {
     "title": "Traductions Contextuelles",
     "demo": {
@@ -121,8 +131,15 @@
       "genderLabel": "Sélectionnez le genre:",
       "male": "Masculin",
       "female": "Féminin",
-      "greeting_male": "Bienvenue M. {{name}}!",
-      "greeting_female": "Bienvenue Mme {{name}}!"
+      "greeting_male_one": "Bienvenue M. {{name}}! Vous avez un nouveau message.",
+      "greeting_female_one": "Bienvenue Mme {{name}}! Vous avez un nouveau message.",
+      "greeting_male_other": "Bienvenue M. {{name}}! Vous avez {{count}} nouveaux messages.",
+      "greeting_female_other": "Bienvenue Mme {{name}}! Vous avez {{count}} nouveaux messages.",
+      "greeting_male_zero": "Bienvenue M. {{name}}! Vous n'avez pas de nouveaux messages.",
+      "greeting_female_zero": "Bienvenue Mme {{name}}! Vous n'avez pas de nouveaux messages."
+      }
+    },
+  "fallback": {
+        "title":"Retomber"
       }
     }
-  }

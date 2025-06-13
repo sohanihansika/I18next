@@ -5,6 +5,7 @@ import './Pages.css';
 const ContextPage = () => {
   const { t } = useTranslation();
   const [gender, setGender] = useState('male');
+  const [itemCount, setItemCount] = useState(1);
   const userName = 'Alex';
   
   return (
@@ -24,10 +25,22 @@ const ContextPage = () => {
             <option value="female">{t('context.demo.female')}</option>
           </select>
         </div>
+        
+        <div className="input-group">
+          <label className="label">{t('plurals.demo.countLabel')}</label>
+          <input
+            type="number"
+            value={itemCount}
+            onChange={(e) => setItemCount(parseInt(e.target.value) || 0)}
+            className="input"
+            min="0"
+          />
+        </div>
+        
 
         <div className="context-greeting-box">
           <p className="context-greeting-text">
-            {t('context.demo.greeting', { name: userName, context: gender })}
+            {t('context.demo.greeting', { name: userName, context: gender , count: itemCount })}
           </p>
         </div>
       </div>

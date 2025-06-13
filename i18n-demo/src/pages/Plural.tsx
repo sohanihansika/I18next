@@ -30,7 +30,7 @@ const PluralsPage = () => {
             {t('plurals.demo.messages', { count: itemCount })}
           </div>
           <div className="result-box result-users">
-            {t('plurals.demo.users', { count: itemCount })}
+            {t('plurals.demo.users', { count: itemCount, ordinal: true})}
           </div>
         </div>
       </div>

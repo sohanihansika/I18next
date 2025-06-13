@@ -1,4 +1,5 @@
 {
+  "header":"React i18next Demo",
     "sidebar": {
       "title": "Features",
       "essentials": "Essentials",
@@ -6,7 +7,8 @@
       "formatting": "Formatting",
       "plurals": "Plurals",
       "nesting": "Nesting",
-      "context": "Context"
+      "context": "Context",
+      "fallback": "Fallback"
     },
     "home": {
       "welcome": "Welcome to React i18next Demo",
@@ -31,12 +33,17 @@
       },
       "nesting": {
         "title": "Nested Translations",
-        "description": "Organize translations with nested object structures"
+        "description": "Allows to reference other keys in a translation"
       },
       "context": {
         "title": "Contextual Translations",
         "description": "Provide different translations based on context"
+      },
+      "fallback": {
+        "title": "Fallback Language",
+        "description": "Use a fallback language when translations are missing"
       }
+
     },
     "essentials": {
       "title": "Translation Essentials",
@@ -57,63 +64,72 @@
         "ageLabel": "Enter your age:",
         "agePlaceholder": "Your age",
         "result": "Hello {{name}}, you are {{age}} years old!",
-        "fillFields": "Fill in the fields above to see interpolation in action",
+        "fillFields": "Hi {{loggedInUser.name}}, Fill in the fields above to see interpolation in action",
         "defaultName": "Guest",
         "defaultAge": "Unknown"
       }
     },
     "formatting": {
-      "title": "Number & Date Formatting",
-      "date": {
-        "title": "Date Formatting",
-        "example": "Current date: {{date}}"
-      },
-      "currency": {
-        "title": "Currency Formatting",
-        "example": "Price: {{price}}"
-      },
-      "number": {
-        "title": "Number Formatting",
-        "example": "Large number: {{number}}"
-      }
+    "title": "Number & Date Formatting",
+    "date": {
+      "title": "Date Formatting",
+      "example": "Current date: {{date, datetime}}"
     },
+    "currency": {
+      "title": "Currency Formatting",
+      "example": "Price: {{price, currency}}"
+    },
+    "number": {
+      "title": "Number Formatting",
+      "example": "Large number: {{number, number}}"
+    },
+    "relative": {
+      "title": "Relative Time Formatting",
+      "example": "Last login: {{timestamp, relative}}"
+    }
+  
+},
+
     "plurals": {
       "title": "Pluralization",
       "demo": {
-        "title": "Plural Forms Demo",
         "countLabel": "Enter item count:",
         "items_one": "{{count}} item",
         "items_other": "{{count}} items",
-        "messages_one": "{{count}} new message",
+        "messages_zero": "No new messages",
+        "messages_one": "One new message",
         "messages_other": "{{count}} new messages",
-        "users_one": "{{count}} user online",
-        "users_other": "{{count}} users online"
+        "users_ordinal_one": "{{count}}st place",
+        "users_ordinal_two": "{{count}}nd place",
+        "users_ordinal_few": "{{count}}rd place",
+        "users_other": "{{count}}th place"
       }
 },
 
     "nesting": {
       "title": "Nested Translations",
-      "user": {
-        "title": "User Information",
-        "profile": {
-          "name": "Name",
-          "email": "Email",
-          "role": "Role",
-          "roles": {
-            "admin": "Administrator",
-            "user": "User",
-            "guest": "Guest"
-          }
-        }
+       "basic": {
+        "title": "Basic",
+        "nesting1": "1 $t(nesting.basic.nesting2)",
+        "nesting2": "2 $t(nesting.basic.nesting3)",
+        "nesting3": "3"
       },
-      "navigation": {
-        "title": "Navigation Menu",
-        "menu": {
-          "home": "Home",
-          "about": "About",
-          "contact": "Contact"
-        }
+      "option": {
+        "title": "Passing options to nestings",
+        "girlsAndBoys": "They have $t(nesting.option.girls, {\"count\": {{girls}} }) and $t(nesting.option.boys, {\"count\": {{boys}} })",
+        "boys": "{{count}} boy",
+        "boys_other": "{{count}} boys",
+        "girls": "{{count}} girl",
+        "girls_other": "{{count}} girls"
+        
+      },
+      "interpolate":{
+        "title": "Passing nesting to interpolated",
+        "key1": "hello world",
+        "key2": "say: {{val}}"
       }
+     
+      
     },
     "context": {
       "title": "Contextual Translations",
@@ -122,9 +138,17 @@
         "genderLabel": "Select gender:",
         "male": "Male",
         "female": "Female",
-        "greeting_male": "Welcome Mr. {{name}}!",
-        "greeting_female": "Welcome Ms. {{name}}!"
+        "greeting_male_one": "Welcome Mr. {{name}}! You have {{count}} new message",
+        "greeting_female_one": "Welcome Ms. {{name}}! You have {{count}} new message",
+        "greeting_male_other": "Welcome Mr. {{name}}! You have {{count}} new messages",
+        "greeting_female_other": "Welcome Ms. {{name}}! You have {{count}} new messages",
+        "greeting_male_zero": "Welcome Mr. {{name}}! You have no new messages",
+        "greeting_female_zero": "Welcome Ms. {{name}}! You have no new messages"
       }
+    },
+    "fallback": {
+      "title": "Fallback",
+      "missingKey": "This is a missing translation key in French. Using fallback to default English."
     }
 
 }

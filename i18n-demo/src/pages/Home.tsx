@@ -24,7 +24,8 @@ const HomePage = () => {
           { key: 'formatting' },
           { key: 'plurals' },
           { key: 'nesting' },
-          { key: 'context' }
+          { key: 'context' },
+          { key: 'fallback' }
         ].map((feature) => (
           <div key={feature.key} className="feature-card">
             <h3 className="feature-title">{t(`features.${feature.key}.title`)}</h3>

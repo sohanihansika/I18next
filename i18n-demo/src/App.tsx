@@ -8,9 +8,12 @@ import HomePage from "./pages/Home";
 import InterpolationPage from "./pages/Interpolation";
 import NestingPage from "./pages/Nesting";
 import PluralsPage from "./pages/Plural";
+import FallbackPage from "./pages/Fallback";
+import { useTranslation } from "react-i18next";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
+  const { t } = useTranslation();
 
   const renderPage = () => {
     switch (currentPage) {
@@ -20,6 +23,7 @@ const App = () => {
       case 'plurals': return <PluralsPage />;
       case 'nesting': return <NestingPage />;
       case 'context': return <ContextPage />;
+      case 'fallback': return <FallbackPage />;
       default: return <HomePage />;
     }
   };
@@ -38,7 +42,7 @@ const App = () => {
                 className="header-title"
                 onClick={() => setCurrentPage('home')}
               >
-                React i18next Demo
+                {t('header')}
               </h1>
             </div>
             <div className="header-right">

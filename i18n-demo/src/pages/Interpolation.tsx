@@ -6,6 +6,10 @@ const InterpolationPage = () => {
   const { t } = useTranslation();
   const [userName, setUserName] = useState('');
   const [userAge, setUserAge] = useState('');
+  const loggedInUser = {
+    name: 'User',
+    email: 'user@email.com'
+  };
 
   return (
     <div className="page-container">
@@ -41,7 +45,7 @@ const InterpolationPage = () => {
                   name: userName || t('interpolation.demo.defaultName'),
                   age: userAge || t('interpolation.demo.defaultAge'),
                 })
-              : t('interpolation.demo.fillFields')}
+              : t('interpolation.demo.fillFields',{loggedInUser})}
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 {
+  "header": "Demo de React i18next",
   "sidebar": {
     "title": "Características",
     "essentials": "Fundamentos",
@@ -6,7 +7,8 @@
     "formatting": "Formateo",
     "plurals": "Plurales",
     "nesting": "Anidación",
-    "context": "Contexto"
+    "context": "Contexto",
+    "fallback": "Retroceder"
   },
   "home": {
     "welcome": "Bienvenido a la Demo de React i18next",
@@ -36,6 +38,10 @@
     "context": {
       "title": "Traducciones Contextuales",
       "description": "Proporcionar diferentes traducciones según el contexto"
+    },
+    "fallback": {
+      "title": "Idioma de Respaldo",
+      "description": "Utilice un idioma de respaldo cuando falten traducciones"
     }
   },
   "essentials": {
@@ -57,26 +63,32 @@
       "ageLabel": "Ingresa tu edad:",
       "agePlaceholder": "Tu edad",
       "result": "¡Hola {{name}}, tienes {{age}} años!",
-      "fillFields": "Completa los campos de arriba para ver la interpolación en acción",
+      "fillFields": "Hola {{loggedInUser.name}}, completa los campos de arriba para ver la interpolación en acción",
       "defaultName": "Invitado",
       "defaultAge": "Desconocido"
     }
   },
+  
   "formatting": {
-    "title": "Formateo de Números y Fechas",
+    "title": "Formato de Números y Fechas",
     "date": {
-      "title": "Formateo de Fechas",
-      "example": "Fecha actual: {{date}}"
+      "title": "Formato de Fecha",
+      "example": "Fecha actual: {{date, datetime}}"
     },
     "currency": {
-      "title": "Formateo de Moneda",
-      "example": "Precio: {{price}}"
+      "title": "Formato de Moneda",
+      "example": "Precio: {{price, currency}}"
     },
     "number": {
-      "title": "Formateo de Números",
-      "example": "Número grande: {{number}}"
+      "title": "Formato de Número",
+      "example": "Número grande: {{number, number}}"
+    },
+    "relative": {
+      "title": "Formato de Tiempo Relativo",
+      "example": "Último acceso: {{timestamp, relative}}"
     }
   },
+
   "plurals": {
     "title": "Pluralización",
     "demo": {
@@ -90,30 +102,29 @@
       "users_other": "{{count}} usuarios en línea" 
     }
   },
-  "nesting": {
-    "title": "Traducciones Anidadas",
-    "user": {
-      "title": "Información del Usuario",
-      "profile": {
-        "name": "Nombre",
-        "email": "Correo Electrónico",
-        "role": "Rol",
-        "roles": {
-          "admin": "Administrador",
-          "user": "Usuario",
-          "guest": "Invitado"
-        }
-      }
-    },
-    "navigation": {
-      "title": "Menú de Navegación",
-      "menu": {
-        "home": "Inicio",
-        "about": "Acerca de",
-        "contact": "Contacto"
-      }
-    }
+ "nesting": {
+  "title": "Traducciones anidadas",
+  "basic": {
+    "title": "Básico",
+    "nesting1": "1 $t(nesting.basic.nesting2)",
+    "nesting2": "2 $t(nesting.basic.nesting3)",
+    "nesting3": "3"
   },
+  "option": {
+    "title": "Pasar opciones a anidaciones",
+    "girlsAndBoys": "Tienen $t(nesting.option.girls, {\"count\": {{girls}} }) y $t(nesting.option.boys, {\"count\": {{boys}} })",
+    "boys": "{{count}} niño",
+    "boys_other": "{{count}} niños",
+    "girls": "{{count}} niña",
+    "girls_other": "{{count}} niñas"
+  },
+  "interpolate": {
+    "title": "Pasar anidaciones a interpolaciones",
+    "key1": "hola mundo",
+    "key2": "decir: {{val}}"
+  }
+},
+
   "context": {
     "title": "Traducciones Contextuales",
     "demo": {
@@ -121,9 +132,17 @@
       "genderLabel": "Selecciona el género:",
       "male": "Masculino",
       "female": "Femenino",
-      "greeting_male": "¡Bienvenido Sr. {{name}}!",
-      "greeting_female": "¡Bienvenida Sra. {{name}}!"
+      "greeting_male_one": "¡Bienvenido Sr. {{name}}! Tienes un nuevo mensaje.",
+      "greeting_female_one": "¡Bienvenida Sra. {{name}}! Tienes un nuevo mensaje.",
+      "greeting_male_other": "¡Bienvenido Sr. {{name}}! Tienes {{count}} nuevos mensajes.",
+      "greeting_female_other": "¡Bienvenida Sra. {{name}}! Tienes {{count}} nuevos mensajes.",
+      "greeting_male_zero": "¡Bienvenido Sr. {{name}}! No tienes nuevos mensajes.",
+      "greeting_female_zero": "¡Bienvenida Sra. {{name}}! No tienes nuevos mensajes."
       
       }
+    },
+    "fallback": {
+      "title": "Idioma de Respaldo",
+      "missingKey": "Falta una clave de traducción al francés. Se está usando el inglés predeterminado."
     }
   }
