@@ -1,23 +1,36 @@
 import i18n, { init } from "i18next";
 import { initReactI18next } from "react-i18next";
-import HttpBackend from "i18next-http-backend";
+import Backend from "i18next-locize-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { locizePlugin} from "locize";
+
+const isProduction = import.meta.env.NODE_ENV === "production";
+
+const locizeOptions = {
+  projectId: import.meta.env.VITE_LOCIZE_PROJECT_ID ,
+  apiKey: import.meta.env.VITE_LOCIZE_API_KEY,
+  referenceLng: "en",
+}
 
 i18n
-  .use(HttpBackend)
+  .use(Backend)
+  .use(locizePlugin)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: "en",
+    // lng: "en",
     fallbackLng: "en",
     debug: true,
-    saveMissing: true,
-    backend: {
-      loadPath: "/locales/{{lng}}/translation.json",
-    },
+    saveMissing: !isProduction, //shouldn't use saveMissing in production 
+    backend: locizeOptions,
+    // backend: {
+    //   loadPath: "/locales/{{lng}}/translation.json",
+    // },
     interpolation: {
       skipOnVariables: false,
-      escapeValue: false,
+      escapeValue: false,  //Normally, we want `escapeValue: true` as it ensures that i18next escapes any code in
+    // translation messages, safeguarding against XSS (cross-site scripting) attacks. However,
+    // React does this escaping itself, so we turn it off in i18next.
       format: function (value, format, lng) {
         if (format === "currency") {
           return new Intl.NumberFormat(lng, {

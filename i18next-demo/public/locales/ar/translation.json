@@ -1,0 +1,147 @@
+{
+  "context": {
+    "demo": {
+      "genderLabel": "اختر الجنس:",
+      "greeting_female_one": "مرحبًا الآنسة {{name}}! لديك رسالة جديدة واحدة",
+      "greeting_female_other": "مرحبًا الآنسة {{name}}! لديك {{count}} رسائل جديدة",
+      "greeting_female_zero": "مرحبًا الآنسة {{name}}! لا توجد رسائل جديدة",
+      "greeting_male_one": "مرحبًا السيد {{name}}! لديك رسالة جديدة واحدة",
+      "greeting_male_other": "مرحبًا السيد {{name}}! لديك {{count}} رسائل جديدة",
+      "greeting_male_zero": "مرحبًا السيد {{name}}! لا توجد رسائل جديدة",
+      "title": "عرض مبني على السياق",
+      "user": "مستخدم",
+      "user_female": "أنثى",
+      "user_male": "ذكر"
+    },
+    "title": "ترجمات حسب السياق"
+  },
+  "essentials": {
+    "basic": {
+      "example": "مرحبًا، أيها العالم!",
+      "simple": "ترجمة بسيطة",
+      "title": "أمثلة الاستخدام الأساسية",
+      "variableExample": "مرحبًا {{name}}، عمرك {{age}} سنة!",
+      "withVariables": "ترجمة مع متغيرات"
+    },
+    "title": "أساسيات الترجمة"
+  },
+  "fallback": {
+    "missingKey": "هذه ترجمة مفقودة في الفرنسية. استخدام الإنجليزية كبديل افتراضي.",
+    "title": "اللغة الاحتياطية"
+  },
+  "features": {
+    "context": {
+      "description": "توفير ترجمات مختلفة بناءً على السياق",
+      "title": "ترجمات حسب السياق"
+    },
+    "essentials": {
+      "description": "طرق الترجمة الأساسية وأنماط استخدام المفاتيح",
+      "title": "أساسيات الترجمة"
+    },
+    "fallback": {
+      "description": "استخدام لغة بديلة عند فقدان الترجمة",
+      "title": "اللغة الاحتياطية"
+    },
+    "formatting": {
+      "description": "تنسيق الأرقام والتواريخ والعملات بناءً على اللغة",
+      "title": "تنسيق الأرقام والتواريخ"
+    },
+    "interpolation": {
+      "description": "إدراج القيم الديناميكية في ترجماتك",
+      "title": "إدراج المتغيرات"
+    },
+    "nesting": {
+      "description": "السماح بالإشارة إلى مفاتيح أخرى داخل الترجمة",
+      "title": "ترجمات متداخلة"
+    },
+    "plurals": {
+      "description": "التعامل مع الصيغ المفردة والجمع تلقائيًا",
+      "title": "قواعد الجمع"
+    }
+  },
+  "formatting": {
+    "currency": {
+      "example": "السعر: {{price, currency}}",
+      "title": "تنسيق العملة"
+    },
+    "date": {
+      "example": "التاريخ الحالي: {{date, datetime}}",
+      "title": "تنسيق التاريخ"
+    },
+    "number": {
+      "example": "رقم كبير: {{number, number}}",
+      "title": "تنسيق الأرقام"
+    },
+    "relative": {
+      "example": "آخر تسجيل دخول: {{timestamp, relative}}",
+      "title": "تنسيق الوقت النسبي"
+    },
+    "title": "تنسيق الأرقام والتواريخ"
+  },
+  "header": "عرض توضيحي لـ React i18next",
+  "home": {
+    "description": "<0>استكشف الميزات القوية لمكتبة الترجمة <1>react-i18next</1>. انقر على أي ميزة في الشريط الجانبي لرؤية أمثلة حية وتعلم كيفية تنفيذ دعم متعدد اللغات في تطبيقات React الخاصة بك.</0>",
+    "welcome": "مرحبًا بك في عرض React i18next"
+  },
+  "interpolation": {
+    "demo": {
+      "ageLabel": "أدخل عمرك:",
+      "agePlaceholder": "عمرك",
+      "defaultAge": "غير معروف",
+      "defaultName": "زائر",
+      "fillFields": "مرحبًا {{loggedInUser.name}}، املأ الحقول أعلاه لمشاهدة الإدراج يعمل",
+      "nameLabel": "أدخل اسمك:",
+      "namePlaceholder": "اسمك",
+      "result": "مرحبًا {{name}}، عمرك {{age}} سنة!",
+      "title": "عرض تفاعلي"
+    },
+    "title": "إدراج المتغيرات"
+  },
+  "nesting": {
+    "basic": {
+      "nesting1": "١ $t(nesting.basic.nesting2)",
+      "nesting2": "٢ $t(nesting.basic.nesting3)",
+      "nesting3": "٣",
+      "title": "أساسي"
+    },
+    "interpolate": {
+      "key1": "مرحبا بالعالم",
+      "key2": "قل: {{val}}",
+      "title": "تمرير تعشيش إلى متغير"
+    },
+    "option": {
+      "boys": "{{count}} ولد",
+      "boys_other": "{{count}} أولاد",
+      "girls": "{{count}} بنت",
+      "girlsAndBoys": "لديهم $t(nesting.option.girls, {\"count\": {{girls}} }) و $t(nesting.option.boys, {\"count\": {{boys}} })",
+      "girls_other": "{{count}} بنات",
+      "title": "تمرير الخيارات داخل التعشيش"
+    },
+    "title": "ترجمات متداخلة"
+  },
+  "plurals": {
+    "demo": {
+      "countLabel": "أدخل عدد العناصر:",
+      "items_one": "عنصر واحد",
+      "items_other": "{{count}} عناصر",
+      "messages_one": "رسالة جديدة واحدة",
+      "messages_other": "{{count}} رسائل جديدة",
+      "messages_zero": "لا توجد رسائل جديدة",
+      "users_ordinal_few": "المركز الثالث",
+      "users_ordinal_one": "المركز الأول",
+      "users_ordinal_two": "المركز الثاني",
+      "users_other": "المركز {{count}}"
+    },
+    "title": "الجمع"
+  },
+  "sidebar": {
+    "context": "السياق",
+    "essentials": "الأساسيات",
+    "fallback": "لغة بديلة",
+    "formatting": "تنسيق",
+    "interpolation": "الإدراج المتغير",
+    "nesting": "التعشيش",
+    "plurals": "الجمع",
+    "title": "الميزات"
+  }
+}

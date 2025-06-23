@@ -8,6 +8,7 @@ const HomePage = () => {
     <div className="home-container">
       <div className="home-header">
         <h1 className="home-title">{t("home.welcome")}</h1>
+        <h2>{t("newKey1", "This segment should be automatically added and translated")}</h2>
         <Trans i18nKey="home.description">
           <p className="home-description">
             Explore the powerful features of <b>react-i18next</b>{" "}

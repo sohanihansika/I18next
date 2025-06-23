@@ -1,5 +1,7 @@
+import { useEffect, useState, Suspense } from "react";
+import { useTranslation } from "react-i18next";
+
 import Sidebar from "./components/Sidebar";
-import { useState, Suspense } from "react";
 import LanguageSwitcher from "./components/LngSwitcher";
 import ContextPage from "./pages/Context";
 import EssentialsPage from "./pages/Essentials";
@@ -9,11 +11,17 @@ import InterpolationPage from "./pages/Interpolation";
 import NestingPage from "./pages/Nesting";
 import PluralsPage from "./pages/Plural";
 import FallbackPage from "./pages/Fallback";
-import { useTranslation } from "react-i18next";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // Set the direction and language dynamically
+  useEffect(() => {
+    const dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = dir;
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -63,7 +71,6 @@ const App = () => {
 
         <div className="flex">
           <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} />
-
           <main>{renderPage()}</main>
         </div>
       </div>

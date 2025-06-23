@@ -51,4 +51,18 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
+
+
+#locize 
+//git bash
+npm install -g locize-cli
+
+locize migrate --api-key 53627b17-b170-4ade-893f-cd3804614bed --project-id 2c0537eb-6e78-4d11-a31e-86bf986266ee --path public/locales
+
+npm run download (  "download": "locize download --project-id 2c0537eb-6e78-4d11-a31e-86bf986266ee --api-key 9be832f9-832c-49c7-95d6-10c8f285e040 --path public/locales")
+
+************
+ npm install i18next-locize-backend
+ remove http-backend from package.json  use locize-backend
+ remove translations.json files in public/locales
 ```
